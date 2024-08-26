@@ -45,7 +45,7 @@ public class AdminService {
         if (!pets.isEmpty()) {
             return pets;
         }
-        throw new RuntimeException("Nao ha pets disponiveis");
+        throw new RuntimeException("Nao há pets disponiveis");
     }
 
     public void QRCodeGerado(UuidQRCodeGerado uuid){
@@ -84,6 +84,6 @@ public class AdminService {
             }
             throw new RuntimeException("Senha incorreta");
         }
-        throw new RuntimeException("usuario nao encontrado");
+        throw new RuntimeException("usuario não encontrado");
     }
 }

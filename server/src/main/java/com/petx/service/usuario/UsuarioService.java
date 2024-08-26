@@ -76,7 +76,7 @@ public class UsuarioService {
             usuario.setCadastroFinalizado(true);
             usuarioRepository.save(usuario);
         } else {
-            throw new EntityNotFoundException("Usuario nao encontrado");
+            throw new EntityNotFoundException("Usuario não encontrado");
         }
     }
 
@@ -124,7 +124,7 @@ public class UsuarioService {
             }
             throw new RuntimeException("Senha Incorreta");
         }
-        throw new EntityNotFoundException("Usuario nao encontrado");
+        throw new EntityNotFoundException("Usuario não encontrado");
     }
 
     public Usuario autenticarGoogle(Usuario usuario) {
@@ -132,7 +132,7 @@ public class UsuarioService {
         if (optionalUsuario.isPresent()) {
             return optionalUsuario.get();
         } else{
-            throw new EntityNotFoundException("Usuario nao encontrado");
+            throw new EntityNotFoundException("Usuario não encontrado");
         }
     }
 }
