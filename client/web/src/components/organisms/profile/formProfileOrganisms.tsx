@@ -24,6 +24,8 @@ const FormProfileOrganisms = ({ setStateRender, setNameTemplate }) => {
     defaultValues: {
       nome: user.nome,
       telefone: user.telefone,
+      estado: user.estado,
+      cidade: user.cidade,
     },
   });
 
@@ -31,19 +33,24 @@ const FormProfileOrganisms = ({ setStateRender, setNameTemplate }) => {
 
   useEffect(() => {
     const fetchUser = async () => {
-      await buscaUsuario(setUser, setIsUserLoaded, reset);
+      await buscaUsuario(setUser, setIsUserLoaded);
     };
     fetchUser();
   }, []);
 
   useEffect(() => {
     if (isUserLoaded) {
-      reset(user);
+      reset({
+        nome: user.nome,
+        telefone: user.telefone,
+        estado: user.estado,
+        cidade: user.cidade,
+      });
     }
   }, [isUserLoaded, user, reset]);
 
   const onSubmit = async (data: any) => {
-    atualizaUsuario(data, setStateRender);
+    await atualizaUsuario(data, setStateRender);
   };
 
   return (
