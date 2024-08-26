@@ -11,7 +11,6 @@ const login = () => {
   return (
     <>
       <LoginTemplate />
-      <ToastContainer />
     </>
   );
 };

@@ -8,7 +8,6 @@ const LoginTemplate = ({ title }) => {
         <h1 className="text-custom-blue font-bold text-4xl">{title}</h1>
         <FormLoginAdminOrganisms />
       </div>
-      <ToastContainer />
     </div>
   );
 };

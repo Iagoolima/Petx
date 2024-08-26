@@ -33,7 +33,6 @@ const ProfileTemplate = ({ stateRenderProfile, setNameTemplate }) => {
       <div className="w-full h-auto flex justify-center items-center pt-10">
         {renderBox()}
       </div>
-      <ToastContainer />
     </div>
   );
 };

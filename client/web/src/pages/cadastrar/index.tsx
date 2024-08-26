@@ -23,7 +23,6 @@ const Cadastrar = () => {
   return (
     <>
       <CadastrarTemplate email={email} />
-      <ToastContainer />
     </>
   );
 };

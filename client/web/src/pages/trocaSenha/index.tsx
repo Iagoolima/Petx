@@ -19,7 +19,6 @@ const TrocarSenha = () => {
   return (
     <>
       <TrocaSenhaTemplate tag={tag} />
-      <ToastContainer />
     </>
   );
 };

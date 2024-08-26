@@ -59,7 +59,6 @@ const PetTemplate = ({ setNameTemplate, setUuidQRcode }) => {
         Cadastrar pet
       </button>
       <div className="w-full min-h-fit flex p-3 ">{renderComponent()}</div>
-      <ToastContainer />
     </div>
   );
 };

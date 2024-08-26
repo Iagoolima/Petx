@@ -22,7 +22,6 @@ const panelAdmin = () => {
   return (
     <>
       <PanelTemplate title={"Administrador"} />
-      <ToastContainer />
     </>
   );
 };

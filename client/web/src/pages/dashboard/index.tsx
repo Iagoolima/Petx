@@ -77,7 +77,6 @@ const Dashboard = () => {
     <div className="flex flex-col md:flex-row">
       <NavbarOrganisms handleStateTemplate={setNameTemplate} />
       <div className="flex-grow">{renderTemplate()}</div>
-      <ToastContainer />
     </div>
   );
 };
