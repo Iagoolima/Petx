@@ -31,7 +31,7 @@ const InputImage = ({ image, setImage, linkImagem, updateImage }) => {
           <img
             src={linkImagem}
             alt="Preview"
-            className="max-h-64 w-full rounded-2xl p-2 object-cover"
+            className="max-h-72 w-full rounded-2xl p-2 object-contain"
           />
           <div className="flex justify-end">
             <label
@@ -57,7 +57,7 @@ const InputImage = ({ image, setImage, linkImagem, updateImage }) => {
               <img
                 src={URL.createObjectURL(image)}
                 alt="Preview"
-                className="max-h-64 w-full rounded-2xl p-2 object-cover"
+                className="max-h-72 w-full rounded-2xl p-2 object-contain"
               />
             </div>
           ) : (
