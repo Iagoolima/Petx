@@ -49,7 +49,7 @@ public class ValidacaoUsuarioService {
             ValidacaoEmail validacaoEmail = optionalValidacaoEmail.get();
 
             if(validacaoEmail.getHoraInserida().toLocalDate().isEqual(LocalDateTime.now().toLocalDate())
-                    && ChronoUnit.MINUTES.between(validacaoEmail.getHoraInserida(), LocalDateTime.now()) <= 2) {
+                    && ChronoUnit.MINUTES.between(validacaoEmail.getHoraInserida(), LocalDateTime.now()) <= 5) {
                 if (validacaoEmail.getCodigo().equals(codigoValidacaoEmail.getCodigoVerificacao().toUpperCase())) {
                     validacaoEmail.setValidado(true);
                     validacaoUsuarioRepository.save(validacaoEmail);
