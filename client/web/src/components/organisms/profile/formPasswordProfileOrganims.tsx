@@ -47,6 +47,9 @@ const FormPasswordProfileOrganisms = ({ setStateRender }) => {
           height={"h-10"}
           register={register}
           name={"senha"}
+          minLength={4}
+          maxLength={50}
+          error={errors.senha}
         />
 
         <LabeledInput
@@ -60,6 +63,8 @@ const FormPasswordProfileOrganisms = ({ setStateRender }) => {
           height={"h-10"}
           register={register}
           name={"senhaConfirmar"}
+          minLength={4}
+          maxLength={50}
         />
         {errorMessage && <p className="text-red-400">{errorMessage}</p>}
         <div className="w-full flex flex-col md:flex-row gap-2">
