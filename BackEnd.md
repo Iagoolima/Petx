@@ -21,4 +21,4 @@ A arquitetura do projeto é simples e modular, proporcionando uma base sólida e
 
 ## UML
 
-imagem
+![UML_PETX](https://github.com/user-attachments/assets/4a716720-9cb0-4ea9-9a82-6f657d1d9b4a)
