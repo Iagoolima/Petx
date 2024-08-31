@@ -37,7 +37,7 @@ const FormCadastrarUsuarioOrganisms = ({ email }) => {
   const onSubmit = async (data: any) => {
     let error;
     if (data.senha !== data.senhaConfirmar) {
-      error = "as senhas sao diferentes";
+      error = "as senhas são diferentes";
     }
 
     if (!error) {
@@ -81,7 +81,7 @@ const FormCadastrarUsuarioOrganisms = ({ email }) => {
             color={"text-custom-blue"}
             fontSize={"text-xl"}
             type={"telephone"}
-            placeholder={"Digite um número que possua WhatsApp para contato"}
+            placeholder={"Digite um número de contato"}
             width={"w-full"}
             height={"h-10"}
             register={register}
