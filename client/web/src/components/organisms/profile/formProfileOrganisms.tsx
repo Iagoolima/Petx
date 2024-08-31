@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { atualizaUsuario, buscaUsuario } from "./utils";
 import LabeledSelect from "@/components/molecules/labeledSelect";
 
-const FormProfileOrganisms = ({ setStateRender, setNameTemplate }) => {
+const FormProfileOrganisms = ({ setStateRender }) => {
   const [isUserLoaded, setIsUserLoaded] = useState(false);
   const [user, setUser] = useState({
     email: "",
@@ -18,14 +18,14 @@ const FormProfileOrganisms = ({ setStateRender, setNameTemplate }) => {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
+    setValue,
     watch,
   } = useForm({
     defaultValues: {
-      nome: user.nome,
-      telefone: user.telefone,
-      estado: user.estado,
-      cidade: user.cidade,
+      nome: "",
+      telefone: "",
+      estado: "",
+      cidade: "",
     },
   });
 
@@ -40,16 +40,14 @@ const FormProfileOrganisms = ({ setStateRender, setNameTemplate }) => {
 
   useEffect(() => {
     if (isUserLoaded) {
-      reset({
-        nome: user.nome,
-        telefone: user.telefone,
-        estado: user.estado,
-        cidade: user.cidade,
-      });
+      setValue("nome", user.nome);
+      setValue("telefone", user.telefone);
+      setValue("estado", user.estado);
+      setValue("cidade", user.cidade);
     }
-  }, [isUserLoaded, user, reset]);
+  }, [isUserLoaded, user, setValue]);
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data) => {
     await atualizaUsuario(data, setStateRender);
   };
 
