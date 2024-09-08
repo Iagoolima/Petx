@@ -55,7 +55,7 @@ const FormCodigoVerificacaoEmailOrganisms: React.FC<Props> = ({
   };
 
   return (
-    <div className="w-full mx-auto flex flex-col justify-center items-center font-roboto p-4 md:w-1/2 sm:h-1/2">
+    <div className="w-full min-h-fit mx-auto flex flex-col justify-center items-center font-roboto p-4 md:w-1/2 sm:h-1/2">
       <h1 className="w-full text-custom-blue text-4xl font-bold mb-5 text-center">
         Verificar Email
       </h1>
@@ -67,7 +67,7 @@ const FormCodigoVerificacaoEmailOrganisms: React.FC<Props> = ({
           Por favor, insira o código de 4 dígitos para validar seu e-mail.
         </p>
         <form
-          className="w-full h-auto flex flex-col justify-center items-center gap-9"
+          className="w-full h-auto flex flex-col justify-center items-center gap-9 pb-4"
           onSubmit={handleSubmit(onSubmit)}
         >
           <div className="w-full xl:w-1/2">
